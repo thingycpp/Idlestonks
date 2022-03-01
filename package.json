@@ -1,0 +1,19 @@
+{
+  "name": "Idlestonks",
+  "version": "1.0.0",
+  "description": "I think you can put two and two together here. Idle... stonks.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-react-views": "^0.11.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-google-login": "^5.2.2"
+  }
+}
