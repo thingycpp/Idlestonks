@@ -28,10 +28,11 @@
       <script>
       	function onSignIn(googleUser) {
         	var profile = googleUser.getBasicProfile();
-        	console.log(profile.getName() + " just logged in!");
+          uname = profile.getName();
 					location.replace("http://localhost:3000/game");
       	}
 				function onUser() {
+          uname = "Unknown";
 					location.replace("http://localhost:3000/game");
 				}
       </script>

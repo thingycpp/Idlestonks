@@ -1,6 +1,5 @@
 const express = require('express');
 const reactViews = require('express-react-views');
-const intermed = import('./exvars/intermed.mjs');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,9 +10,10 @@ app.set('view engine', 'jsx');
 app.engine('jsx', reactViews.createEngine());
 
 // TODO: Add other file 'signup.js' that signup.html links to so i can import intermed easily
+let uname = null;
 
 app.get('/', (req, res) => {
-	if (intermed.uname != null) {
+	if (uname != null) {
 		console.log(uname + ' just came from ' + req.path + ' and is headed to /game');
 		res.redirect('/game');
 	} else {
@@ -27,7 +27,6 @@ app.get('/game', (req, res) => {
 });
 
 app.get('/signup', (req, res) => {
-  intermed.ores = res;
 	res.sendFile(path.join(__dirname, '/views', 'signup.html'));
 });
 
