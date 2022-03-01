@@ -1,7 +1,6 @@
-let uname = null;
-let ores = null;
+export let uname = null;
+export let ores = null;
 
-function switchToGame(nuname) {
-  uname = nuname;
+export function switchToGame() {
   ores.redirect('/game');
 }

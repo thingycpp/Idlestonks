@@ -27,7 +27,7 @@ app.get('/game', (req, res) => {
 });
 
 app.get('/signup', (req, res) => {
-    intermed.ores = res;
+  intermed.ores = res;
 	res.sendFile(path.join(__dirname, '/views', 'signup.html'));
 });
 
