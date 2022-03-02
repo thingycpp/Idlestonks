@@ -23,8 +23,8 @@ app.get('/game', (req, res) => {
 	res.render('game');
 });
 
-app.get('/signup', (req, res) => {
-	res.sendFile(path.join(__dirname, '/views', 'signup.html'));
+app.get('/login', (req, res) => {
+	res.sendFile(path.join(__dirname, '/views', 'login.html'));
 });
 
 app.listen(port);
