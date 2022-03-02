@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 	if (uname != null) {
 		res.redirect('/game');
 	} else {
-		res.redirect('/signup');
+		res.redirect('/login');
 	}
 });
 
