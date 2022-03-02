@@ -9,15 +9,12 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
 app.engine('jsx', reactViews.createEngine());
 
-// TODO: Add other file 'signup.js' that signup.html links to so i can import intermed easily
 let uname = null;
 
 app.get('/', (req, res) => {
 	if (uname != null) {
-		console.log(uname + ' just came from ' + req.path + ' and is headed to /game');
 		res.redirect('/game');
 	} else {
-		console.log('A new player just came from ' + req.path + ' and is headed to /signup');
 		res.redirect('/signup');
 	}
 });
