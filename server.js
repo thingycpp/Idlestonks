@@ -5,9 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use('/public', express.static('public'));
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jsx');
-app.engine('jsx', reactViews.createEngine());
+app.use('/src', express.static('src'));
 
 let uname = null;
 
@@ -20,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/game', (req, res) => {
-	res.render('game');
+	res.sendFile(path.join(__dirname, '/views', 'game.html'));
 });
 
 app.get('/login', (req, res) => {

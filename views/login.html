@@ -24,22 +24,15 @@
     </header>
 	  <header class="App-header">
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
-			<button onclick="onUser()">Login as Unknown</button>
+			<script src="/src/game.js"></script>
       <script>
       	function onSignIn(googleUser) {
         	var profile = googleUser.getBasicProfile();
           uname = profile.getName();
 					location.replace("https://idlestonks.ultrastonks.repl.co/game");
       	}
-				function onUser() {
-          uname = "Unknown";
-					location.replace("https://idlestonks.ultrastonks.repl.co/game");
-				}
       </script>
     </header>
-		<header class="App-header">
-			<p>If google sign in doesn't reload the page login as unknown and change your user name in the chat. Your items will not save this way though so we are working to figure this out.</p>
-		</header>
   </div>
 </body>
 </html>
